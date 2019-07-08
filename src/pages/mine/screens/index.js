@@ -14,8 +14,8 @@ import {
   View,
   Text,
   StatusBar,
+  Image,
 } from 'react-native';
-
 import {
   Header,
   LearnMoreLinks,
@@ -23,6 +23,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import FastImage from 'react-native-fast-image';
 
 const App = () => {
   return (
@@ -34,6 +35,14 @@ const App = () => {
           style={styles.scrollView}>
           <Header />
           <View style={styles.body}>
+            <FastImage
+              source={{uri: 'http://www.w3school.com.cn/i/eg_tulip.jpg'}}
+              style={styles.prefix_img}
+            />
+            <Image
+              source={require('~src/images/eg_tulip.jpg')}
+              style={styles.prefix_img}
+            />
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
@@ -91,6 +100,10 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+  },
+  prefix_img: {
+    width: 400,
+    height: 266,
   },
 });
 
