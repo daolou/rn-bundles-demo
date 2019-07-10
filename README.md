@@ -34,7 +34,7 @@
 ├── bundles (bundle输出目录)
 ├── business.config.js (打包业务模块的配置)
 ├── common.config.js (打包公共基础模块的配置)
-├── common.js (公共基础模块的入口文件)
+├── common.js (公共基础模块的入口文件，将第三方依赖/shim等文件引入进来)
 ├── config (配置文件目录)
 ├── index.js (开发模式的入口文件)
 ├── ios (原生代码，原生开发维护)
