@@ -288,9 +288,9 @@ module.exports = {
 为了保证 jsbundle 版本和原生 nation 版本保持同步，需要前端和原生人员共同维护一个配置文件，例如放到 firebase：
 ![remote-config](https://user-gold-cdn.xitu.io/2019/7/10/16bdaccac3b8cd9d?w=1596&h=802&f=png&s=132655)
 
-### Android 部分
+### Android 部分（等大佬补充）
 
-### Ios 部分
+### Ios 部分（等大佬补充）
 
 附：[repo](https://github.com/Mr-jiangzhiguo/rn-bundles-demo)
 
