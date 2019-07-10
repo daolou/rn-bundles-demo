@@ -49,12 +49,14 @@
 ### js 部分
 
 通常，我们将一个大的 jsbundle 包拆分为基础包和业务包：
-基础包：承接 react，react-native 和一些第三方依赖，这些依赖一般不会有太多变动（毕竟 rn 开发大都锁定依赖版本）
-业务包：承接业务模块，一般有多个模块（比如登录模块，个人中心模块，。。。）
+- 基础包：承接 react，react-native 和一些第三方依赖，这些依赖一般不会有太多变动（毕竟 rn 开发大都锁定依赖版本）
+- 业务包：承接业务模块，一般有多个模块（比如登录模块，个人中心模块，。。。）
+
 基于 `react-native bundle` 命令拆包(其实是基于[metro](https://facebook.github.io/metro/docs/en/configuration))
-命令为我们提供了 `--config` 参数，让我们可以自己指定配置文件，这样我们就可以通过两个配置文件（common 和 business）来分别进行打包了，
-`react-native bundle [其他配置] --config common`：打公共基础包
-`react-native bundle [其他配置] --config business`：打业务包
+命令为我们提供了 `--config` 参数，让我们可以自己指定配置文件，这样我们就可以通过两个配置文件（common 和 business）来分别进行打包了:
+- `react-native bundle [其他配置] --config common`：打公共基础包
+- `react-native bundle [其他配置] --config business`：打业务包
+
 下面我们来看看 metro 的这个 config 文件：
 
 ```js
