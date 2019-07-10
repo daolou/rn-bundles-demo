@@ -5,20 +5,13 @@ import 'react';
 import 'react-native';
 import 'react-native-fast-image';
 
-
 if (!__DEV__) {
-    console = {
-        info: () => {
-        },
-        log: () => {
-        },
-        warn: () => {
-        },
-        error: () => {
-        },
-        time: () => {
-        },
-        timeEnd: () => {
-        },
-    };
+  console = {
+    info: () => {},
+    log: () => {},
+    warn: () => {},
+    error: () => {},
+    time: () => {},
+    timeEnd: () => {},
+  };
 }

@@ -1,9 +1,3 @@
-/**
- * Metro configuration for React Native
- * https://github.com/facebook/react-native
- *
- * @format
- */
 // 基础打包配置
 const createModuleIdFactory = require('./config/createModuleIdFactory');
 

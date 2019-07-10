@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -32,11 +32,12 @@ const App = () => {
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
+          style={styles.scrollView}
+        >
           <Header />
           <View style={styles.body}>
             <FastImage
-              source={{uri: 'http://www.w3school.com.cn/i/eg_tulip.jpg'}}
+              source={{ uri: 'http://www.w3school.com.cn/i/eg_tulip.jpg' }}
               style={styles.prefix_img}
             />
             <Image

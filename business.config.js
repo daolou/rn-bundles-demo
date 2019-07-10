@@ -2,7 +2,6 @@
 const createModuleIdFactory = require('./config/createModuleIdFactory');
 const postProcessModulesFilter = require('./config/postProcessModulesFilter');
 
-
 module.exports = {
   transformer: {
     getTransformOptions: async () => ({

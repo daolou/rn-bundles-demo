@@ -15,26 +15,27 @@
     }
  */
 module.exports = {
-  'version': 1,
-  'common': {
-    'moduleName': 'platform',
-    'bundleName': 'platform.bundle',
+  version: 1,
+  common: {
+    moduleName: 'platform',
+    bundleName: 'platform.bundle',
   },
-  'bundles': [{
-      'animate': false,
-      'statusBgColor': '#408EF5',
-      'type': 'push',
-      'source': 'mine',
-      'moduleName': 'rbd_mine',
-      'bundleName': 'rbd_mine.bundle',
+  bundles: [
+    {
+      animate: false,
+      statusBgColor: '#408EF5',
+      type: 'push',
+      source: 'mine',
+      moduleName: 'rbd_mine',
+      bundleName: 'rbd_mine.bundle',
     },
     {
-      'animate': true,
-      'statusBgColor': '#ffffff',
-      'type': 'push',
-      'source': 'discover',
-      'moduleName': 'rbd_discover',
-      'bundleName': 'rbd_discover.bundle',
+      animate: true,
+      statusBgColor: '#ffffff',
+      type: 'push',
+      source: 'discover',
+      moduleName: 'rbd_discover',
+      bundleName: 'rbd_discover.bundle',
     },
   ],
 };

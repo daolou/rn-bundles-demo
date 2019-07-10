@@ -8,7 +8,6 @@ const access = promisify(fs.access);
 const resolvePath = require('./resolvePath');
 const asyncForEach = require('./asyncForEach');
 
-
 const copydir = async (from, to) => {
   from = resolvePath(from);
   to = resolvePath(to);
@@ -22,7 +21,7 @@ const copydir = async (from, to) => {
   }
   const paths = await readdir(from);
 
-  await asyncForEach(paths, async (item) => {
+  await asyncForEach(paths, async item => {
     const _src = path.join(from, item);
     const _dest = path.join(to, item);
 
@@ -32,9 +31,7 @@ const copydir = async (from, to) => {
     } else if (stats.isDirectory) {
       await copydir(_src, _dest);
     }
-
   });
 };
 
 module.exports = copydir;
-

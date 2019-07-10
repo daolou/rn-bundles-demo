@@ -2,7 +2,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const resolvePath = require('./resolvePath');
 
-const generateMd5 = (fsHash) => {
+const generateMd5 = fsHash => {
   return fsHash.digest('hex');
 };
 
@@ -11,11 +11,11 @@ const generateMd5 = (fsHash) => {
  * http://nodejs.cn/api/fs.html#fs_fs_readfile_path_options_callback
  * @param {string} filePath - 文件路径
  */
-const getHash = (filePath) => {
+const getHash = filePath => {
   // 这里并没有使用stream，是因为对于.zip这种压缩包的二进制文件，用流的形式获取md5和普通的通过buffer/string获取的会不一样
-  return new Promise((resolve,reject) => {
-    fs.readFile(resolvePath(filePath),(err,data)=>{
-      if (err){
+  return new Promise((resolve, reject) => {
+    fs.readFile(resolvePath(filePath), (err, data) => {
+      if (err) {
         reject(err);
       }
       const fsHash = crypto.createHash('md5');
@@ -32,8 +32,7 @@ const getHash = (filePath) => {
  * http://nodejs.cn/api/fs.html#fs_fs_readfilesync_path_options
  * @param {string} filePath - 文件路径
  */
-const getHashSync = (filePath) => {
-
+const getHashSync = filePath => {
   try {
     const buffer = fs.readFileSync(resolvePath(filePath));
     const fsHash = crypto.createHash('md5');
@@ -50,4 +49,3 @@ module.exports = {
   getHash,
   getHashSync,
 };
-
