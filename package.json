@@ -16,7 +16,7 @@
     "react-native-fast-image": "7.0.2"
   },
   "devDependencies": {
-    "@babel/core": "7.5.0",
+    "@babel/core": "7.29.6",
     "@babel/plugin-proposal-decorators": "7.4.4",
     "@babel/runtime": "7.5.1",
     "@react-native-community/eslint-config": "^0.0.5",
